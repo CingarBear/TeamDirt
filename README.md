@@ -1,2 +1,2 @@
 # TeamDirt
-They made me make this team
+Welcome to the dirtiest team on GitHub!
