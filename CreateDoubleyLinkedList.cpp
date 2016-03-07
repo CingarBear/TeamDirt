@@ -28,7 +28,15 @@ memberNode* CreateDoubleyLinkedList(memberNode *head, //IN - the head of the sta
 					                string fileName)  //IN - The input file being
 													  // used
 {
-	ifstream inFile;
+	ifstream 	inFile;
+	Date 		date;
+	string 		name,
+				type;
+	int			memNum,
+				d,
+				m,
+				y;
+	double 		newTab;
 
 	head = NULL;
 
@@ -41,13 +49,27 @@ memberNode* CreateDoubleyLinkedList(memberNode *head, //IN - the head of the sta
 
 	while(inFile && perPtr != NULL)
 	{
-//		getline(inFile,perPtr->name);
-//		inFile.get(perPtr->gender);
-//		inFile.ignore(10000,' ');
-//		inFile >> perPtr->age;
-//		inFile.ignore(10000,'\n');
-//		inFile.ignore(10000,'\n');
+		getline(inFile, name);
+		inFile >> memNum;
+		inFile.ignore(1000, '\n');
+		getline(inFile, type);
+		inFile >> d;
+		inFile.ignore(1000, '\n');
+		inFile >> m;
+		inFile.ignore(1000, '\n');
+		inFile >> y;
+		inFile.ignore(1000, '\n');
+		inFile >> newTab;
+		inFile.ignore(1000, '\n');
+		inFile.ignore(1000, '\n');
 
+		date.SetDayMonthAndYear(d,m,y);
+
+		perPtr->member.SetAll(name,
+							  memNum,
+							  type,
+							  date,
+							  newTab);
 
 		cout << "Adding : " << perPtr ->member.GetName() << endl;
 
@@ -62,6 +84,7 @@ memberNode* CreateDoubleyLinkedList(memberNode *head, //IN - the head of the sta
 		{
 			if(perPtr->member.GetName() < head->member.GetName())
 			{
+
 				perPtr->next = head;
 				head->prev = perPtr;
 				perPtr->prev = NULL;
@@ -111,8 +134,6 @@ memberNode* CreateDoubleyLinkedList(memberNode *head, //IN - the head of the sta
 		perPtr = new memberNode;
 
 	}
-
-
 
 	inFile.close();
 	delete perPtr;
