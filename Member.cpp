@@ -38,6 +38,18 @@ double 		Member::GetTab()
 /**********
  * Setters
  **********/
+void 		Member::SetAll(string newName,
+				   int 	  newMemNum,
+				   string newMemType,
+				   Date   newExpire,
+				   double newtab)
+{
+	name 		= newName;
+	memNum 		= newMemNum;
+	memType 	= newMemType;
+	expire 		= newExpire;
+	tab 		= newtab;
+}
 void 		Member::SetName(string newName)
 			{name = newName;}
 void 		Member::SetMemberNum(int newMemNum)

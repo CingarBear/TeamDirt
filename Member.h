@@ -43,6 +43,11 @@ class Member
 		double 		GetTab();
 
 		//Setters
+		void 		SetAll(string newName,
+						   int 	  newMemNum,
+						   string newMemType,
+						   Date   newExpire,
+						   double newtab);
 		void 		SetName(string newName);
 		void 		SetMemberNum(int newMemNum);
 		void 		GetMemberType(string newMemType);
