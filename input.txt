@@ -1,0 +1,39 @@
+Zzz Zzzzz
+1111
+Regular 
+2 
+2 
+2016 
+200
+
+Michael Cingari 
+2222 
+Regular 
+3 
+3 
+2017 
+76
+
+Jasmine Estrada 
+3333 
+Regular 
+20 
+12 
+2018 
+159
+
+Abigale Strongman
+4656 
+Regular 
+15
+8 
+2005 
+1000
+
+Pablo Picasso
+1995
+Regular
+5
+6
+1605
+100000
