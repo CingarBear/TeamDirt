@@ -41,6 +41,7 @@ class Member
 		string 		GetMemberType();
 		Date 		GetExpirationDate();
 		double 		GetTab();
+		double 		GetRebate();
 
 		//Setters
 		void 		SetAll(string newName,
@@ -50,9 +51,16 @@ class Member
 						   double newtab);
 		void 		SetName(string newName);
 		void 		SetMemberNum(int newMemNum);
-		void 		GetMemberType(string newMemType);
+		void 		SetMemberType(string newMemType);
 		void 		SetExpirationDate(Date newExpire);
 		void 		SetTab(double newtab);
+		void 		SetRebate(double newRebate);
+
+		//Setters
+
+
+		//Getters
+
 
 	private :
 		string 		name;
@@ -60,6 +68,7 @@ class Member
 		string 		memType;
 		Date 		expire;
 		double 		tab;
+		double 		rebate;
 
 
 

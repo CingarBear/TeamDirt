@@ -34,6 +34,8 @@ Date 		Member::GetExpirationDate()
 			{return expire;}
 double 		Member::GetTab()
 			{return tab;}
+double 	 	Member::GetRebate()
+			{return rebate;}
 
 /**********
  * Setters
@@ -54,9 +56,11 @@ void 		Member::SetName(string newName)
 			{name = newName;}
 void 		Member::SetMemberNum(int newMemNum)
 			{memNum = newMemNum;}
-void 		Member::GetMemberType(string newMemType)
+void 		Member::SetMemberType(string newMemType)
 			{memType = newMemType;}
 void 		Member::SetExpirationDate(Date newExpire)
 			{expire = newExpire;}
 void 		Member::SetTab(double newtab)
 			{tab = newtab;}
+void 	 	Member::SetRebate(double newRebate)
+			{rebate = newRebate;}
