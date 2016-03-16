@@ -46,21 +46,17 @@ memberNode* CreateDoubleyLinkedList(memberNode *head, //IN - the head of the sta
 
 	inFile.open(fileName.c_str());
 
-
 	while(inFile && perPtr != NULL)
 	{
 		getline(inFile, name);
 		inFile >> memNum;
 		inFile.ignore(1000, '\n');
 		getline(inFile, type);
-		inFile >> d;
-		inFile.ignore(1000, '\n');
 		inFile >> m;
-		inFile.ignore(1000, '\n');
+		inFile.ignore(1000, '/');
+		inFile >> d;
+		inFile.ignore(1000, '/');
 		inFile >> y;
-		inFile.ignore(1000, '\n');
-		inFile >> newTab;
-		inFile.ignore(1000, '\n');
 		inFile.ignore(1000, '\n');
 
 		date.SetDayMonthAndYear(d,m,y);
@@ -70,6 +66,10 @@ memberNode* CreateDoubleyLinkedList(memberNode *head, //IN - the head of the sta
 							  type,
 							  date,
 							  newTab);
+		if(type == "Executive")
+		{
+			perPtr->member.SetRebate(0.035);
+		}
 
 		cout << "Adding : " << perPtr ->member.GetName() << endl;
 
@@ -110,12 +110,15 @@ memberNode* CreateDoubleyLinkedList(memberNode *head, //IN - the head of the sta
 			}
 			else
 			{
-				while(perPtr->member.GetName() > searchPtr->member.GetName() && searchPtr->next != NULL)
+				while(perPtr->member.GetName() >
+				   searchPtr->member.GetName() &&
+				   searchPtr->next != NULL)
 				{
 					searchPtr = searchPtr ->next;
 				}
 
-				if(searchPtr ->next == NULL)
+				if(perPtr->member.GetName() >
+				   searchPtr->member.GetName())
 				{
 					searchPtr->next = perPtr;
 					perPtr ->prev = searchPtr;
