@@ -21,6 +21,8 @@
 #include "GetAndCheckInput.h"
 #include "Date.h"
 #include "Member.h"
+#include "ExecutiveMember.h"
+
 using namespace std;
 
 /***********************************************************************
@@ -73,6 +75,13 @@ struct memberNode
 	memberNode* next;
 };
 
+struct ExecMemberNode
+{
+	ExecMemberNode*     prev;
+	ExecutiveMember 	execMember;
+	ExecMemberNode*     next;
+};
+
 /**************************************************************************
  * PrintHeaderOstream
  *    This function receives an assignment name, type, number, and output
@@ -108,6 +117,21 @@ memberNode* CreateDoubleyLinkedList(memberNode *head, //IN/OUT - The head
 									string fileName); //IN - The name of the
 													  // input file the user
 											 	 	  // wants to use
+
+/**************************************************************************
+ * CreatLinkedList
+ *    This function creates a linked list of struct variables named
+ *    "memberNode". It creates a new node, fills that node with information
+ *    from an input file. Then adds that node to the linked list. Then the
+ *    function will loop until the input file has no more information, or
+ *    if the pointer is accessing unreserved memory (NULL).
+ * RETURNS -> The head of the new linked list.
+ **************************************************************************/
+ExecMemberNode* CreateDoubleyLinkedList(ExecMemberNode *head, //IN/OUT - The head
+													  	  	  // of the linked list
+										string   fileName); //IN - The name of the
+													  	  	// input file the user
+											 	 	  	    // wants to use
 
 /**************************************************************************
  * ChooseInputFile
