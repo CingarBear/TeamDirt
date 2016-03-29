@@ -23,9 +23,10 @@ class Member
         Member();
         Member(QString 		newName,
                 int 		newMemNum,
-                QString 		newMemType,
+                QString 	newMemType,
                 Date 		newExpire,
-                double 		newtab);
+                double 		newtab,
+                float       newRebate);
         /**************
          * Destrustor
          **************/
@@ -36,11 +37,12 @@ class Member
          *******************/
 
         //Getters
-        QString 		GetName();
+        QString 	GetName();
         int 		GetMemberNum();
-        QString 		GetMemberType();
+        QString 	GetMemberType();
         Date 		GetExpirationDate();
         double 		GetTab();
+        float       GetRebate();
 
         //Setters
         void 		SetAll(QString newName,
@@ -50,16 +52,18 @@ class Member
                            double newtab);
         void 		SetName(QString newName);
         void 		SetMemberNum(int newMemNum);
-        void 		GetMemberType(QString newMemType);
+        void 		SetMemberType(QString newMemType);
         void 		SetExpirationDate(Date newExpire);
         void 		SetTab(double newtab);
+        void        SetRebate(float newRebate);
 
     private :
-        QString 		name;
+        QString 	name;
         int 		memNum;
-        QString 		memType;
+        QString 	memType;
         Date 		expire;
         double 		tab;
+        float       rebate;
 
 
 
