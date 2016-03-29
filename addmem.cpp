@@ -23,11 +23,24 @@ addMem::~addMem()
 
 void addMem::on_nameInput_returnPressed(memberNode *Ptr)
 {
+//    Member mem;
+//    QString name;
 
+//    name = ui->lineEdit->text();
+
+//    mem.SetName(name);
+
+//    qDebug() << name;
+//    ui->lineEdit->clear();
 
 }
 
 void addMem::on_nameInput_returnPressed()
+{
+
+}
+
+void addMem::on_numberInput_returnPressed()
 {
 
 }

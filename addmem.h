@@ -22,6 +22,8 @@ private slots:
 
     void on_nameInput_returnPressed();
 
+    void on_numberInput_returnPressed();
+
 private:
     Ui::addMem *ui;
 };
