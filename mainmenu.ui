@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainMenu</class>
+ <widget class="QMainWindow" name="MainMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>223</red>
+        <green>219</green>
+        <blue>180</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>223</red>
+        <green>219</green>
+        <blue>180</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>223</red>
+        <green>219</green>
+        <blue>180</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>223</red>
+        <green>219</green>
+        <blue>180</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>MainMenu</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>70</y>
+      <width>211</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>assets/TeamDirt.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMembership">
+    <property name="title">
+     <string>Membership</string>
+    </property>
+    <widget class="QMenu" name="menuAdd_Delete_Member_2">
+     <property name="title">
+      <string>Add/Delete Member</string>
+     </property>
+     <addaction name="actionAdd_Member"/>
+     <addaction name="actionDelete_Member"/>
+    </widget>
+    <addaction name="menuAdd_Delete_Member_2"/>
+    <addaction name="actionSearch_Member"/>
+    <addaction name="actionUpdate_Membership"/>
+    <addaction name="actionSearch_Expiring"/>
+   </widget>
+   <widget class="QMenu" name="menuInventory">
+    <property name="title">
+     <string>Inventory</string>
+    </property>
+    <widget class="QMenu" name="menuAdd_Delete_Inventory">
+     <property name="title">
+      <string>Add/Delete Inventory</string>
+     </property>
+     <addaction name="actionAdd_Inventory"/>
+     <addaction name="actionDelete_Inventory"/>
+    </widget>
+    <addaction name="menuAdd_Delete_Inventory"/>
+    <addaction name="actionSearch_Inventory"/>
+   </widget>
+   <widget class="QMenu" name="menuPrint_Reports">
+    <property name="title">
+     <string>Print Reports</string>
+    </property>
+    <addaction name="actionTotal_Purchases"/>
+    <addaction name="actionItems_Sold"/>
+    <addaction name="actionRebate"/>
+    <addaction name="actionTotal_Products_Sold"/>
+   </widget>
+   <addaction name="menuMembership"/>
+   <addaction name="menuInventory"/>
+   <addaction name="menuPrint_Reports"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAdd_Member">
+   <property name="text">
+    <string>Add Member</string>
+   </property>
+  </action>
+  <action name="actionDelete_Member">
+   <property name="text">
+    <string>Delete Member</string>
+   </property>
+  </action>
+  <action name="actionSearch_Member">
+   <property name="text">
+    <string>Search Member</string>
+   </property>
+  </action>
+  <action name="actionUpdate_Membership">
+   <property name="text">
+    <string>Update Membership</string>
+   </property>
+  </action>
+  <action name="actionSearch_Expiring">
+   <property name="text">
+    <string>Search Expiring</string>
+   </property>
+  </action>
+  <action name="actionAdd_Inventory">
+   <property name="text">
+    <string>Add Inventory</string>
+   </property>
+  </action>
+  <action name="actionDelete_Inventory">
+   <property name="text">
+    <string>Delete Inventory</string>
+   </property>
+  </action>
+  <action name="actionSearch_Inventory">
+   <property name="text">
+    <string>Search Inventory</string>
+   </property>
+  </action>
+  <action name="actionTotal_Purchases">
+   <property name="text">
+    <string>Total Purchases</string>
+   </property>
+  </action>
+  <action name="actionItems_Sold">
+   <property name="text">
+    <string>Daily Sales Report</string>
+   </property>
+  </action>
+  <action name="actionRebate">
+   <property name="text">
+    <string>Rebate</string>
+   </property>
+  </action>
+  <action name="actionTotal_Products_Sold">
+   <property name="text">
+    <string>Total Products Sold</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
